@@ -2,7 +2,7 @@
 ## 1. Probelm Analysis
 - To converts a Long URL and redirects users to the original URL when the short link is accessed.
 ### Example
-**Long URLs** : https://www.example.com/sangay/profile/details
+**Long URLs** : https://www.example.com/sangay/profile/details .
 **short URLs** :https://tinyurl.com/sangay1
 
 ### The problem was focuses on both functional and non-functional requirements:
@@ -90,7 +90,7 @@
 - Load limiting for security
 
 ## 4. Brief critical analysis summary
-- The author offer a well structured and practical system design that weigh of scalability, performance and simplicity.
+- The author offer a well structured and practical system design a URL shortening system similar like TinyURl. Furthermore it clearly explain the important weigh of scalability, performance and simplicity.
 
 #### Strengths
 - clear breakdown of requirements 
@@ -98,4 +98,4 @@
 - Well organized use of base62 encoding
 - Right use of caching for performance
 
-- In conclusion, the design is strong in terms of basic architecture and scalability but it could be improves by including more details on security , system monitoring an dadvance distributed system techniques.
+**In conclusion, the design is strong in terms of basic architecture and scalability but it could be improves by including more details on security , system monitoring an dadvance distributed system techniques.**
