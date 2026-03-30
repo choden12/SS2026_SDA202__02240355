@@ -4,11 +4,22 @@
 2. [Part1](#part1)
 3. [Part2](#part2)
 4. [part3](#part3)
-5. [Conclusion](#conclusion)
+5. [Challenges](#challenges)
+6. [Conclusion](#conclusion)
+7. [Reference](#reference)
 6. [Link](#link)
 
 ## Overview
 - This practical outlines the design of an automated grading system for programming assignments in a university Sotfware Engineering course. Where system is intended to replace the current manual process and address the challenges of scalling to 300+ student or user per year, the key goals include automation of grading, plagiarism detection, integration with university learing management system.
+
+#### Before entering directly into the main part, i had identified the actors and there roles, those are;
+- Student: To submits code , view result and resubmit
+- Professor: To sets deadline, grading criteria and reviews grades
+- System: To perform is grading, plagiarism check and stroage.
+- Turnitin: External plagiarism detection service.
+- LMS: To stores final grades
+- Admin: To manages system
+- Auditor: To reviews audit logs
 
 - The design is presentend through three complementary diagram:
 
@@ -44,6 +55,11 @@
 - Auditor can independently retrieve the audit log at any time
 - This design ensures that every action (submission, grading, plagiarism check, grade finalization, sync) is logged, satisfying the auditability requirement.
 
+## Challenges
+- During my development of the Interaction Overview Diagram (IoD) for the automated grading system, there were several challenges that I had to overcome. Some of the challenges that I had during my development were centered on how I could understand the interactions of all the actors involved in the system. Some of the actors involved in the system include students, professors, the automated grading system, the university’s LMS, and external services such as Turnitin. Therefore, I had to understand how each actor interacts with other actors in order to achieve the business goal. 
+
+- Also i found challenging to organize the flow of interaction in a clear and logical order as i needed to ensure the diagram started from business outcome perspective and then showed actor to actor interation.
+
 ## Conclusion
 ##### The proposed Automated SWE Grading System addresses the university’s needs for scalability, integrity, and auditability while respecting budget and infrastructure constraints. The three diagrams illustrate:
 - Actor‑to‑actor interactions that drive the business outcome.
@@ -51,6 +67,13 @@
 - System‑level interactions that realise those use cases in a coordinated workflow.
 
 - By automating grading and plagiarism detection, the system frees professors from repetitive manual work, provides students with rapid feedback, and maintains a complete audit trail for regulatory compliance. This design forms a solid foundation for implementation within the university’s existing ecosystem
+
+## Reference
+- GeeksforGeeks. (2025, July 23). Interaction overview diagrams | Unified Modeling Language (UML).
+https://www.geeksforgeeks.org/interaction-overview-diagrams-unified-modeling-language-uml/
+- Visual Paradigm. (n.d.). What is interaction overview diagram?
+https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-interaction-overview-diagram/
+
 
 ## Link
 - Deepseek: https://chat.deepseek.com/a/chat/s/c5cf15d4-1ff0-44f3-b3ca-ba08805b0f55 
