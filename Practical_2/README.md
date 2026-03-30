@@ -14,13 +14,13 @@
 
 ## Part1
 ###  Interaction Overview(IoD) from an Actor-to-Actor perspective
-![IOD]()
+![IOD](./images/IOD.png)
 ### Explanation
 - The diagram shows that the business outcome relies on a closed loop where the professor defines the rules, students submit code within the deadline, the system performs automated grading and plagiarism checking (via Turnitin), and finally pushes the results to the LMS. An auditor can later review the complete audit trail. This view abstracts away system internals, focusing solely on actor‑to‑actor interactions.
 
 ## Part2
 The Use Case Diagram defines the system boundary and the specific functionalities that support the interactions identified above. Actors include the human roles (Professor, Student, Auditor) and external systems (Turnitin, LMS).
-![UCD](.images/UCD.png)
+![UCD](./images/UCD.png)
 
 ### Explanation
 - Professor defines due date/time and grading criteria.
@@ -34,7 +34,7 @@ The Use Case Diagram defines the system boundary and the specific functionalitie
 ## Part3
 - This diagram combines the previous views, showing how actors interact through the system to accomplish the business outcome. It uses a swimlane format to clarify responsibilities.
 ![FINAL](./images/FINAL.png)
-![FINAL](./Practical_2/images/FINAL1.png)
+![FINAL](./images/FINAL1.png)
 
 ### Explanation
 The sequence diagram illustrates the full flow:
@@ -54,8 +54,8 @@ The sequence diagram illustrates the full flow:
 - By automating grading and plagiarism detection, the system frees professors from repetitive manual work, provides students with rapid feedback, and maintains a complete audit trail for regulatory compliance. This design forms a solid foundation for implementation within the university’s existing ecosystem
 
 ## Link
-Deepseek: https://chat.deepseek.com/a/chat/s/c5cf15d4-1ff0-44f3-b3ca-ba08805b0f55 
-Draw.io: https://app.diagrams.net#G1Ir7RZhGqwMTBU94pyYJyxGOqjMZN1DBI#%7B%22pageId%22%3A%22MYZbLemxwOWpdsTyfFYM%22%7D
+- Deepseek: https://chat.deepseek.com/a/chat/s/c5cf15d4-1ff0-44f3-b3ca-ba08805b0f55 
+- Draw.io: https://app.diagrams.net#G1Ir7RZhGqwMTBU94pyYJyxGOqjMZN1DBI#%7B%22pageId%22%3A%22MYZbLemxwOWpdsTyfFYM%22%7D
 
 
 
