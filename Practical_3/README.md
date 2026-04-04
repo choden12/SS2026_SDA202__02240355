@@ -55,7 +55,7 @@
 4. **Describe the runtime snapshot** – A description of object graph in textual format can be very useful when trying to explain the system behavior to the profs.
 
 ## Conclusion
-- Class Diagram and Object Model describe a comprehensive and economical solution to meet all of the required criteria. Automation of grade checking will involve the use of free test runners, and AuditLog will ensure persistent and traceable grades. Plagiarism will be checked internally and via TurnItIn under a cost constraint. Integration of Learning Management System will be done via batch files without touching the mainframe code. Deadline is set using Assignment.dueDateTime, and Submission.attemptNumber allows an unlimited number of tries. Grade rules can be configured flexibly by defining them in JSON format. The object model (for Alice, grade 85.5, similarity 0.12 in her third try) proves that it works for real cases.
+- Class Diagram and Object Model describe a comprehensive and economical solution to meet all of the required criteria. Automation of grade checking will involve the use of free test runners, and AuditLog will ensure persistent and traceable grades. Plagiarism will be checked internally and via TurnItIn under a cost constraint. Integration of Learning Management System will be done via batch files without touching the mainframe code. Deadline is set using Assignment.dueDateTime, and Submission.attemptNumber allows an unlimited number of tries. Grade rules can be configured flexibly by defining them in JSON format. 
 
 ## reference
 GeeksforGeeks. (2025, August 29). Unified modeling language (UML) class diagrams.
