@@ -45,7 +45,6 @@
 - It was very difficult for me to decide on what classes to put. I had many different entities that could be included in the ER Diagram such as User, Student, Professor, Admin, Assignment, Submission, Grade, PlagiarismReport, AutoGrader, TurnItInAdapter, and LMSAdapter. It was very difficult for me to strike a balance between being complete and simple.
 
 ## lesson_learn
-
 1. **Audit logs should be planned from day one** – It is difficult to retro-fit auditability into a project. Having an immutable, timestamped log is easy and complies with regulations.
 
 2. **Multiple attempts are not a bug; rather they are a feature** – Allow students multiple tries without storing unnecessary data. The benefits outweigh the cost by far.
@@ -58,11 +57,11 @@
 - Class Diagram and Object Model describe a comprehensive and economical solution to meet all of the required criteria. Automation of grade checking will involve the use of free test runners, and AuditLog will ensure persistent and traceable grades. Plagiarism will be checked internally and via TurnItIn under a cost constraint. Integration of Learning Management System will be done via batch files without touching the mainframe code. Deadline is set using Assignment.dueDateTime, and Submission.attemptNumber allows an unlimited number of tries. Grade rules can be configured flexibly by defining them in JSON format. 
 
 ## reference
-GeeksforGeeks. (2025, August 29). Unified modeling language (UML) class diagrams.
+- GeeksforGeeks. (2025, August 29). Unified modeling language (UML) class diagrams.
 https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/
 
-GeeksforGeeks. (2025, January 3). Unified modeling language (UML) object diagrams.
+- GeeksforGeeks. (2025, January 3). Unified modeling language (UML) object diagrams.
 https://www.geeksforgeeks.org/system-design/unified-modeling-language-uml-object-diagrams/
 
 ## Link
-draw.io: https://app.diagrams.net/#
+- draw.io: https://app.diagrams.net/#
