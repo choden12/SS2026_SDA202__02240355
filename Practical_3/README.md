@@ -19,33 +19,35 @@
 ![Class_Diagram](./images/part1.png)
 ![Class_Diagram](./images/part2.png)
 
-##### Explanation
-**Inheritance**: `Student`, `Professor`, and `Admin` extend `User`.
-- **Association**:
-  - Professor: creates Assignment.
-  - Assignment: is related to GradingCriteria with cardinality  to 1.
-  - Assignment: is related to Submission with cardinality 1.
-  - student: is related to Submission with cardinality 1.
-  - Submission :is related to Grade with cardinality 1 to 0..1.
-  - Submission: is related to PlagiarismReport with cardinality 1
+##### Relationships 
+**Inheritance**: `Student`, `Professor`, `Admin`and `User`.
+- Professor creates Assignment
+- Assignment has GradingCriteria
+- Student submits Submission
+- Submission produces Grade
+- LMSAdapter exports Grade
+- TurnitinAdapter creates PlagiarismReport
+- AutoGrader uses GradingCriteria
 
-  ## object_diagram
+## object_diagram
   - is a snapshot of the system at a specific moment.
   ![object](./images/object.png)
 
-##### Explanation
-- Re-attempts: are permitted (attempt 3).
-- Compliance check – submission at 20:15 occurs before deadline, hence valid.
-- Grading procedure: results in scoring with extensive feedback provided.
-- Check for plagiarism: is carried out (internal + TurnItIn).
-- Tracking the attempt: is recorded.
-- Learning Management System: (objects not shown) would output the mark to the mainframe using batch process.
+##### Relationships
+- Student makes submission(attempt 3)
+- Assignment has GradingCriteria
+- Submission produces Grade
+- submission has PlagiarismReport
+- AutoGrader uses GradingCriteria and then creates grade
+- TurnitinAdapter creates plagiarismReport
+- LMSAdapter Exports Grade
+- AuditLog logs action for student
 
 ## challenges
-- It was very difficult for me to decide on what classes to put. I had many different entities that could be included in the ER Diagram such as User, Student, Professor, Admin, Assignment, Submission, Grade, PlagiarismReport, AutoGrader, TurnItInAdapter, and LMSAdapter. It was very difficult for me to strike a balance between being complete and simple.
+- I felt very hard to understanding the differences betweeen a class diagram and an object model as at first i mixed the value all together inside the class diagram and i forgot to add methods in the object model where it took me serveral attempts to separate between blueprint and snapshot. Also i felt very hard in identifying all the required classes from the requirements as the case study mentioned has many feature where i missed my initial class diagram so i had to redraw the diagram. 
 
 ## lesson_learn
-1. **Audit logs should be planned from day one** – It is difficult to retro-fit auditability into a project. Having an immutable, timestamped log is easy and complies with regulations.
+1. **Audit logs should be planned from day one** – It is difficult to retro fit auditability into a project. Having an immutable, timestamped log is easy and complies with regulations.
 
 2. **Multiple attempts are not a bug; rather they are a feature** – Allow students multiple tries without storing unnecessary data. The benefits outweigh the cost by far.
 
