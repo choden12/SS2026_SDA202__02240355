@@ -15,7 +15,7 @@
 - In order to convey the static structure and a specific running example of the system under consideration, two kinds of UML diagrams will be employed  **class diagrams** and **object diagrams** (or object models).
 
 ## class_Diagram
-- class diagram is a blueprint of the system ststic structure.
+- class diagram is a blueprint of the system static structure.
 ![Class_Diagram](./images/part1.png)
 ![Class_Diagram](./images/part2.png)
 
