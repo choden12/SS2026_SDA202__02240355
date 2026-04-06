@@ -13,13 +13,13 @@
 - This practical outlines the design of an automated grading system for programming assignments in a university Sotfware Engineering course. Where system is intended to replace the current manual process and address the challenges of scalling to 300+ student or user per year, the key goals include automation of grading, plagiarism detection, integration with university learing management system.
 
 #### Before entering directly into the main part, i had identified the actors and there roles, those are;
-- Student: To submits code , view result and resubmit
-- Professor: To sets deadline, grading criteria and reviews grades
-- System: To perform is grading, plagiarism check and stroage.
-- Turnitin: External plagiarism detection service.
-- LMS: To stores final grades
-- Admin: To manages system
-- Auditor: To reviews audit logs
+Student: To submits code, checks result and resubmits.
+- Professor: To sets deadline, grading policy and evaluates grades.
+- System: To executes grading process, plagiarism checking and storage.
+- Turnitin: External service for plagiarism checking.
+- LMS: To keeps final grades.
+- Admin: To manages system.
+- Auditor: To analyzes audit logs.
 
 - The design is presentend through three complementary diagram:
 
@@ -27,20 +27,20 @@
 ###  Interaction Overview(IoD) from an Actor-to-Actor perspective
 ![IOD](./images/IOD.png)
 ### Explanation
-- The diagram shows that the business outcome relies on a closed loop where the professor defines the rules, students submit code within the deadline, the system performs automated grading and plagiarism checking via Turnitin and finally pushes the results to the LMS. An auditor can later review the complete audit trail. This view abstracts away system internals, focusing solely on actor‑to‑actor interactions.
+- In diagram above, it can be observed that for successful completion of the business process, there is a need for a closed-loop cycle wherein the professor sets the rules, the students enter their code before the deadline, there is automatic grading, plagiarism detection through Turnitin, and finally result publishing in the LMS. The auditor has the option of reviewing the entire audit trail afterwards.
 
 ## Part2
-- The Use Case Diagram defines the system boundary and the specific functionalities that support the interactions identified above. The actors include the human roles Professor, Student, Auditor and external systems turnitin and LMS.
+- Use Case Diagram describes the system boundaries along with the exact functionalities for carrying out the interaction process mentioned above. The actors in this diagram consist of Professor, Student, Auditor, and turnitin, as well as LMS systems.
 ![UCD](./images/UCD.png)
 
 ### Explanation
-- The professor defines due date/time and grading criteria.
-- Student uploads source code and multiple attempts allowed until deadline.
-- System rejects submissions after the deadline.
-- System compiles and runs code against the defined criteria, producing a provisional grade.
-- System compares submission against other submissions and sends code to Turnitin for similarity analysis.
-- Student sees final grade and detailed feedback
-- After finalization, grades are pushed to the mainframe‑based LMS.
+- The instructor provides definitions of deadline and grading rubrics.
+- Students submit source code, with unlimited attempts till the deadline.
+- The system does not accept any submission after the deadline.
+- The system analyzes the source code according to rubrics and assigns an initial score.
+- The system analyzes similarities between submitted sources compared to others and to sources at Turnitin.
+- Students receive their final score along with the feedback.
+- Once finalized, scores are uploaded to the mainframe-based LMS.
 
 ## Part3
 - This diagram combines the previous views, showing how actors interact through the system to accomplish the business outcome. It uses a swimlane format to clarify responsibilities.
@@ -49,24 +49,24 @@
 
 ### Explanation
 ##### The sequence diagram illustrates the full flow:
-- Professor configures the assignment upfront.
-- Students submit multiple times and the system enforces the deadline and runs auto‑grading plus Turnitin checks after each submission.
-- Professor reviews all results, makes final adjustments and triggers the grade sync to the LMS which is mainframe based but only requires a one‑way push.
-- Auditor can independently retrieve the audit log at any time
-- This design ensures that every action (submission, grading, plagiarism check, grade finalization, sync) is logged, satisfying the auditability requirement.
+- The professor establishes the assignment prior to its allocation.
+- The Several submissions are possible, and the system handles the deadline enforcement, grading, and submission scanning through Turnitin.
+- The professor assesses all results, makes the required changes, and launches the grade synchronization process to the LMS that is mainframe-based but requires just a one-way push.
+- Access to the audit trail is available to the auditor independently.
+- Such setup ensures that all actions will be logged and, thus, meets the requirement of auditability.
 
 ## Challenges
-- During my development of the Interaction Overview Diagram (IoD) for the automated grading system, there were several challenges that I had to overcome. Some of the challenges that I had during my development were centered on how I could understand the interactions of all the actors involved in the system. Some of the actors involved in the system include students, professors, the automated grading system, the university’s LMS, and external services such as Turnitin. Therefore, I had to understand how each actor interacts with other actors in order to achieve the business goal. 
+- In the process of developing the Interaction Overview Diagram (IoD) for the automated grading system, I had to deal with certain difficulties. Among the difficulties I faced during the process were those related to how I can get an understanding of the interactions between all the actors involved in the process. Among the actors involved in the process are the students, the professor, the automated grading system, the LMS used by the university, and external agencies like Turnitin. Thus, I had to gain an understanding of how these actors interact among themselves in order to meet the business objective.
 
-- Also i found challenging to organize the flow of interaction in a clear and logical order as i needed to ensure the diagram started from business outcome perspective and then showed actor to actor interation.
+- Moreover, I faced difficulties in organizing the sequence of interaction as I had to make sure that the flow began with the perspective of business outcomes and then proceeded with actor-to-actor interaction.
 
 ## Conclusion
-##### The proposed Automated SWE Grading System addresses the university’s needs for scalability, integrity, and auditability while respecting budget and infrastructure constraints. The three diagrams illustrate:
-- Actor‑to‑actor interactions that drive the business outcome.
-- Functional decomposition into clear use cases.
-- System‑level interactions that realise those use cases in a coordinated workflow.
+##### The Automated SWE Grading System proposal will meet the requirements of the university with respect to scalability, integrity, and auditability within budget and infrastructural limitations. The three figures demonstrate:
+- Interactions between actors that generate the business value.
+- The decomposition of functionality into use cases.
+- Interactions at the system level that implement the use cases.
 
-- By automating grading and plagiarism detection, the system frees professors from repetitive manual work, provides students with rapid feedback, and maintains a complete audit trail for regulatory compliance. This design forms a solid foundation for implementation within the university’s existing ecosystem
+- Through automated evaluation and plagiarism prevention, the system allows faculty members to avoid repetitive processes, ensures quick feedback to the students, and enables maintenance of a full audit trail. Such a structure makes an excellent basis for integration into the university environment.
 
 ## Reference
 - GeeksforGeeks. (2025, July 23). Interaction overview diagrams | Unified Modeling Language (UML).
